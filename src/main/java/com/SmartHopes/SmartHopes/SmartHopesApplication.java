@@ -8,7 +8,7 @@ public class SmartHopesApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(SmartHopesApplication.class, args);	
-		//hamza test
+		//Master Test
 	}
 
 }
