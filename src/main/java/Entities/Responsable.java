@@ -2,6 +2,11 @@ package Entities;
 
 import java.util.Date;
 
+import javax.persistence.DiscriminatorValue;
+import javax.persistence.Entity;
+
+@Entity
+@DiscriminatorValue("Responsable")
 public class Responsable extends Personne {
 
 	private String code_responsable;
