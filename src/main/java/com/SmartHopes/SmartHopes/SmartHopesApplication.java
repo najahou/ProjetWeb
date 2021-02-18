@@ -9,9 +9,6 @@ public class SmartHopesApplication
 	
 	public static void main(String[] args) {
 		SpringApplication.run(SmartHopesApplication.class, args);
-		System.out.println("hello");
-		
+		//System.out.println("hello");	
 	}
-
-
 }
