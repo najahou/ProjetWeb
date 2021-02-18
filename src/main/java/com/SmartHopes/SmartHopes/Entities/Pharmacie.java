@@ -7,9 +7,9 @@ import java.util.List;
 
 @Entity
 public class Pharmacie {
+
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
-	private String code_pharmacie;
+	private int code_pharmacie;
 	private String nompharmacie;
 	private String location;
 	private String telephone;
@@ -21,7 +21,7 @@ public class Pharmacie {
 	public Pharmacie() {
 	}
 
-	public Pharmacie(String code_pharmacie, String nompharmacie, String location, String telephone, String email, List<Medicament> medicamentList) {
+	public Pharmacie(int code_pharmacie, String nompharmacie, String location, String telephone, String email, List<Medicament> medicamentList) {
 		this.code_pharmacie = code_pharmacie;
 		this.nompharmacie = nompharmacie;
 		this.location = location;
@@ -30,11 +30,11 @@ public class Pharmacie {
 		this.medicamentList = medicamentList;
 	}
 
-	public String getCode_pharmacie() {
+	public int getCode_pharmacie() {
 		return code_pharmacie;
 	}
 
-	public void setCode_pharmacie(String code_pharmacie) {
+	public void setCode_pharmacie(int code_pharmacie) {
 		this.code_pharmacie = code_pharmacie;
 	}
 

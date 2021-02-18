@@ -13,13 +13,13 @@ public class Urgent extends Demande {
 	private String Description;
 
 
-	public Urgent(String id_demande, String Description) {
-		super(id_demande);
-		this.Description = Description;
-	}
-
 	public Urgent() {
 
+	}
+
+	public Urgent(int id_demande, Patient patient_id, String description) {
+		super(id_demande, patient_id);
+		Description = description;
 	}
 
 	public String getDescription() {

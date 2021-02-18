@@ -7,29 +7,25 @@ import javax.persistence.*;
 @DiscriminatorColumn(name="type_demande")
 public class Demande {
 	@Id
-	private String id_demande;
-	
-	@ManyToOne(cascade = CascadeType.ALL)
-	@JoinColumn(name="patient_id")
+	private int id_demande;
+
+    @ManyToOne(fetch = FetchType.LAZY, optional = false)
+    @JoinColumn(name = "patient_id")
 	private Patient patient_id;
 
     public Demande() {
 
     }
-
-	public String getId_demande() {
+	public int getId_demande() {
 		return id_demande;
 	}
 
-	
-	
-	public Demande(String id_demande) {
-		super();
-		this.id_demande = id_demande;
-	}
+    public Demande(int id_demande, Patient patient_id) {
+        this.id_demande = id_demande;
+        this.patient_id = patient_id;
+    }
 
-
-	public void setId_demande(String id_demande) {
+    public void setId_demande(int id_demande) {
 		this.id_demande = id_demande;
 	}
 	

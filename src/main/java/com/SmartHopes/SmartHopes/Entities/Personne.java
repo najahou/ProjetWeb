@@ -23,10 +23,10 @@ public class Personne {
     public Personne() {
     }
 
-    public Personne(String nom, String prenom, String cin, Date dat_naissance, String sexe, String telephone,
+    public Personne(long id, String nom, String prenom, String cin, Date dat_naissance, String sexe, String telephone,
                     String adresse) {
         super();
-
+        this.id=id;
         this.nom = nom;
         this.prenom = prenom;
         this.cin = cin;

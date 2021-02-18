@@ -21,11 +21,11 @@ public class Medicament {
 
 
 	@ManyToOne(fetch = FetchType.LAZY, optional = false)
-	@JoinColumn(name = "pharmacie")
+	@JoinColumn(name = "pharmacie_id")
 	private Pharmacie pharmacie;
 
 
-	public Medicament(Long id_medic, String reference, String nom_medicament, String effects, String contreIndication, List<Rappel> rappelList, Pharmacie pharmacie) {
+	public Medicament(String reference, String nom_medicament, String effects, String contreIndication, List<Rappel> rappelList, Pharmacie pharmacie) {
 		this.id_medic = id_medic;
 		this.reference = reference;
 		this.nom_medicament = nom_medicament;

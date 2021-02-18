@@ -13,13 +13,11 @@ public class Besoin extends Demande {
 	public Besoin() {
 	}
 
-	public Besoin(String id_demande, String capture, String msg_vocale) {
-		super(id_demande);
+	public Besoin(int id_demande, Patient patient_id, String capture, String msg_vocale) {
+		super(id_demande, patient_id);
 		this.capture = capture;
 		this.msg_vocale = msg_vocale;
 	}
-
-
 
 	public String getCapture() {
 		return capture;
