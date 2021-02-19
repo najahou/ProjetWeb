@@ -1,11 +1,10 @@
 package com.SmartHopes.SmartHopes.Repositories;
 
-import com.SmartHopes.SmartHopes.Entities.chambre;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
+import com.SmartHopes.SmartHopes.Entities.testinsertion;
 @Repository
-public interface chambreRepository extends JpaRepository<chambre, String> {
-
+public interface reposinsert  extends JpaRepository<testinsertion, Long>{
 
 }
