@@ -11,8 +11,8 @@ public class Responsable extends Personne {
     private String autre_tele;
     private boolean actif;
 
-    public Responsable(long id, String nom, String prenom, String cin, Date dat_naissance, String sexe, String telephone, String adresse, String autre_tele, boolean actif) {
-        super(id, nom, prenom, cin, dat_naissance, sexe, telephone, adresse);
+    public Responsable(String nom, String prenom, String cin, Date dat_naissance, String sexe, String telephone, String adresse, String autre_tele, boolean actif) {
+        super(nom, prenom, cin, dat_naissance, sexe, telephone, adresse);
         this.autre_tele = autre_tele;
         this.actif = actif;
     }

@@ -15,7 +15,7 @@ public class Patient extends Personne {
 	private String photo;
 
 	@OneToMany(mappedBy = "patient_id", cascade = CascadeType.ALL)
-	private List < Demande > demandeList;
+	public List < Demande > demandeList;
 
 	@OneToMany(mappedBy = "patient_id", cascade = CascadeType.ALL)
 	private List < Rappel > rappelList;
@@ -24,8 +24,8 @@ public class Patient extends Personne {
 	@JoinColumn(name = "chambre_id")
 	private chambre chambre_id;
 
-	public Patient(long id, String nom, String prenom, String cin, Date dat_naissance, String sexe, String telephone, String adresse, String num_dossier, String ville, String id_securite, String photo, List<Demande> demandeList, List<Rappel> rappelList, chambre chambre_id) {
-		super(id, nom, prenom, cin, dat_naissance, sexe, telephone, adresse);
+	public Patient( String nom, String prenom, String cin, Date dat_naissance, String sexe, String telephone, String adresse, String num_dossier, String ville, String id_securite, String photo, List<Demande> demandeList, List<Rappel> rappelList, chambre chambre_id) {
+		super(nom, prenom, cin, dat_naissance, sexe, telephone, adresse);
 		this.num_dossier = num_dossier;
 		this.ville = ville;
 		this.id_securite = id_securite;

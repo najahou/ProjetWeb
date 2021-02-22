@@ -18,8 +18,7 @@ public class chambre {
 	public chambre() {
 	}
 
-	public chambre(Long id_ch, int num_chambre, String etage, int nb_lit, List<Patient> patientList) {
-		this.id_ch = id_ch;
+	public chambre(int num_chambre, String etage, int nb_lit, List<Patient> patientList) {
 		this.num_chambre = num_chambre;
 		this.etage = etage;
 		this.nb_lit = nb_lit;
