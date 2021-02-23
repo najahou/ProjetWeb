@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+<form th:action="@{/addAdmin}" th:object="${responsable}" method="post">
+    <table>
+        <tr>
+            <td><input type="text" th:field="*{nom}" /></td>
+        </tr>
+        <tr>
+            <td><input type="text" th:field="*{prenom}" /></td>
+        </tr>
+        <tr>
+        <tr>
+            <td><input type="text" th:field="*{adresse}" /></td>
+        </tr>
+        <tr>
+        <tr>
+            <td><input type="text" th:field="*{autre_tele}" /></td>
+        </tr>
+        <tr>
+            <td><input type="text" th:field="*{cin}" /></td>
+        </tr>
+        <tr>
+            <td><input type="text" th:field="*{sexe}" /></td>
+        </tr>
+        <tr>
+        <tr>
+            <td><button type="submit">Submit</button></td>
+        </tr>
+    </table>
+</form>
+
+</body>
+</html>

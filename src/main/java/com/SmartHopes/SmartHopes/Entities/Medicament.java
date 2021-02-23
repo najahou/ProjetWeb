@@ -25,13 +25,12 @@ public class Medicament {
 	private Pharmacie pharmacie;
 
 
-	public Medicament(String reference, String nom_medicament, String effects, String contreIndication, List<Rappel> rappelList, Pharmacie pharmacie) {
+	public Medicament(String reference, String nom_medicament, String effects, String contreIndication, Pharmacie pharmacie) {
 		this.id_medic = id_medic;
 		this.reference = reference;
 		this.nom_medicament = nom_medicament;
 		this.effects = effects;
 		this.contreIndication = contreIndication;
-		this.rappelList = rappelList;
 		this.pharmacie = pharmacie;
 	}
 

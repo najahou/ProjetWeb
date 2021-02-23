@@ -21,13 +21,12 @@ public class Pharmacie {
 	public Pharmacie() {
 	}
 
-	public Pharmacie(int code_pharmacie, String nompharmacie, String location, String telephone, String email, List<Medicament> medicamentList) {
+	public Pharmacie(int code_pharmacie, String nompharmacie, String location, String telephone, String email) {
 		this.code_pharmacie = code_pharmacie;
 		this.nompharmacie = nompharmacie;
 		this.location = location;
 		this.telephone = telephone;
 		this.email = email;
-		this.medicamentList = medicamentList;
 	}
 
 	public int getCode_pharmacie() {
