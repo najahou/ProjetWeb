@@ -500,7 +500,9 @@
                                                     <td><span th:text="${Pharmacie.location}"></span></td>          
                                                     <td><span th:text="${Pharmacie.telephone}"></span></td>     
                                                     <td><span th:text="${Pharmacie.email}"></span></td>    
-                                                     <td><a href="Pharmacie/deletePharmacie1/Pharmacie.code_pharmacie">Modification</a>&nbsp;&nbsp;<a href="#">Suppression</a></td>                                 
+                                                     <td><a th:href="@{/update/{id}(id=${Pharmacie.code_pharmacie})}"
+ 
+                                                     >Modification</a>&nbsp;&nbsp;<a th:href="@{/deletePharmacie1/{id}(id=${Pharmacie.code_pharmacie})}">Suppression</a></td>                                 
                                                     </td>
                                                 </tr>
                                             </tbody>

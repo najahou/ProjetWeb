@@ -20,16 +20,16 @@
     <meta name="author" content="Phoenixcoded" />
 
     <!-- Favicon icon -->
-    <link rel="icon" href="assets/images/favicon.svg" type="image/x-icon">
+    <link rel="icon" th:href="@{assets/images/favicon.svg}" type="image/x-icon">
     <!-- fontawesome icon -->
-    <link rel="stylesheet" href="assets/fonts/fontawesome/css/fontawesome-all.min.css">
+    <link rel="stylesheet" th:href="@{assets/fonts/fontawesome/css/fontawesome-all.min.css}">
     <!-- animation css -->
-    <link rel="stylesheet" href="assets/plugins/animation/css/animate.min.css">
+    <link rel="stylesheet" th:href="@{assets/plugins/animation/css/animate.min.css}">
 
     <!-- select2 css -->
-    <link rel="stylesheet" href="assets/css/plugins/select2.min.css">
+    <link rel="stylesheet" th:href="@{assets/css/plugins/select2.min.css}">
     <!-- vendor css -->
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" th:href="@{assets/css/style.css}">
 
 </head>
 <body class="">
@@ -542,50 +542,6 @@
                                     <div class="card-body">
                                        
                                        
-                                        <form th:action="@{/createPharmacie}" th:object="${Pharmacie}" method="post">
-                                        <div class="form-group row">
-                                            <label class="col-form-label col-lg-3 col-sm-12 text-lg-right">Code Pharmacie</label>
-                                            <div class="col-lg-4 col-md-9 col-sm-12">
-                                                <input type="text" th:field="*{code_pharmacie}"style="width: 55%" value="1">
-                                              
-                                            </div>
-                                        </div>
-                                        <div class="form-group row">
-                                            <label class="col-form-label col-lg-3 col-sm-12 text-lg-right">Nom Pharmacie</label>
-                                            <div class="col-lg-4 col-md-9 col-sm-12">
-                                                <input type="text" th:field="*{nompharmacie}"style="width: 55%" >
-                                              
-                                            </div>
-                                        </div>
-                                        <div class="form-group row">
-                                            <label class="col-form-label col-lg-3 col-sm-12 text-lg-right">Location</label>
-                                            <div class="col-lg-4 col-md-9 col-sm-12">
-                                                <input type="text" th:field="*{location}"style="width: 55%">
-                                                
-                                            </div>
-                                        </div>
-                                        <div class="form-group row">
-                                            <label class="col-form-label col-lg-3 col-sm-12 text-lg-right">N°Tel</label>
-                                            <div class="col-lg-4 col-md-9 col-sm-12">
-                                                <input type="text" th:field="*{telephone}"style="width: 55%" >
-                                            
-                                            </div>
-                                        </div>
-                                        <div class="form-group row">
-                                            <label class="col-form-label col-lg-3 col-sm-12 text-lg-right">E-mail</label>
-                                            <div class="col-lg-4 col-md-9 col-sm-12">
-                                                <input type="text" th:field="*{email}"style="width: 55%" value="1">
-                                             
-                                            </div>
-                                        </div>
-                                         <div class="form-group row">
-                                            <label class="col-form-label col-lg-3 col-sm-12 text-lg-right"></label>
-                                            <div class="col-lg-4 col-md-9 col-sm-12">
-                                            
-                                                <input type="submit" value="Modification" class="btn btn-primary"/>  
-                                            </div>
-                                        </div>
-                                       </form>
                                     </div>
                                 </div>
                             </div>

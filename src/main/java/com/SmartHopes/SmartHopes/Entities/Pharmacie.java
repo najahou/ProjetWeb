@@ -28,6 +28,13 @@ public class Pharmacie {
 		this.telephone = telephone;
 		this.email = email;
 	}
+	public Pharmacie(String nompharmacie, String location, String telephone, String email) {
+		this.code_pharmacie = code_pharmacie;
+		this.nompharmacie = nompharmacie;
+		this.location = location;
+		this.telephone = telephone;
+		this.email = email;
+	}
 
 	public int getCode_pharmacie() {
 		return code_pharmacie;
