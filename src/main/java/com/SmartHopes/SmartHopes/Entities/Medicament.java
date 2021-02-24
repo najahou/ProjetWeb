@@ -16,8 +16,6 @@ public class Medicament {
 	private String effects;
 	private String contreIndication;
 
-	@OneToMany(mappedBy = "medicament_id", cascade = CascadeType.ALL)
-	private List< Rappel > rappelList;
 
 
 	@ManyToOne(fetch = FetchType.LAZY, optional = false)
@@ -78,13 +76,7 @@ public class Medicament {
 		this.contreIndication = contreIndication;
 	}
 
-	public List<Rappel> getRappelList() {
-		return rappelList;
-	}
-
-	public void setRappelList(List<Rappel> rappelList) {
-		this.rappelList = rappelList;
-	}
+	
 
 	public Pharmacie getPharmacie() {
 		return pharmacie;

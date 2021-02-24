@@ -80,15 +80,12 @@ public class PharmacieController {
 	    public String submit4(@PathVariable("id") int code_pharmacie,Model model) {
 	  
 	      String id = String.valueOf(code_pharmacie);
-	      if(id != null) {
-	    	  
+	      if(id != null) {  
 	    	    model.addAttribute("pharmacie", ps.getPharmacie(code_pharmacie)); 
-	    	    Pharmacie ph = ps.getPharmacie(code_pharmacie);
-	    	 
+	    	    Pharmacie ph = ps.getPharmacie(code_pharmacie); 
 	      	}
 	      else {
 		 		 model.addAttribute("pharmacie", new Pharmacie());
-
 	      }
 	      return "Pharmacie/editpharmacie";
 	    }
