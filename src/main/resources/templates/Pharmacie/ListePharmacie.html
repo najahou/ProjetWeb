@@ -489,6 +489,7 @@
                                                     <th data-breakpoints="xs">Location Pharmacie</th>
                                                     <th data-breakpoints="xs">Telephone</th>
                                                     <th data-breakpoints="xs">E-mail</th>
+                                                     <th data-breakpoints="xs">Action</th>
                                                    
                                                 </tr>
                                             </thead>
@@ -498,7 +499,8 @@
                                                     <td><span th:text="${Pharmacie.nompharmacie}"></span></td>    
                                                     <td><span th:text="${Pharmacie.location}"></span></td>          
                                                     <td><span th:text="${Pharmacie.telephone}"></span></td>     
-                                                    <td><span th:text="${Pharmacie.email}"></span></td>                                 
+                                                    <td><span th:text="${Pharmacie.email}"></span></td>    
+                                                     <td><a href="Pharmacie/deletePharmacie1/Pharmacie.code_pharmacie">Modification</a>&nbsp;&nbsp;<a href="#">Suppression</a></td>                                 
                                                     </td>
                                                 </tr>
                                             </tbody>

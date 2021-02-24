@@ -16,23 +16,27 @@ import com.SmartHopes.SmartHopes.services.PharmacieService;
 public class PharmacieController {
 	@Autowired PharmacieService ps;
 	
-	@RequestMapping(value = "/pharmacie", method = RequestMethod.GET)
-    public String showForm(Model model) {
-        model.addAttribute("Pharmacie",new Pharmacie());
-        return "Pharmacie/createpharmacie";
-    }
-	 //code d'ajout Pharmacie
-	 @RequestMapping(value = "/createPharmacie", method = RequestMethod.POST)
-	    public String submit(Pharmacie ph) {
-	      ps.saveProduit(ph);
-	        return "admin";
+	//code d'ajout Pharmacie
+		@RequestMapping(value = "/pharmacie", method = RequestMethod.GET)
+	    public String showForm(Model model) {
+	        model.addAttribute("Pharmacie",new Pharmacie());
+	        return "Pharmacie/createpharmacie";
 	    }
-	 
-	 @RequestMapping("/all")
-	 public String showAll(Model model) {
-	     model.addAttribute("Pharmacies", ps.getAllPharmacies());
-	     return "Pharmacie/ListePharmacie";
-	 }
+		 @RequestMapping(value = "/createPharmacie", method = RequestMethod.POST)
+		    public String submit(Pharmacie ph) {
+		      ps.saveProduit(ph);
+		        return "admin";
+		    }
+	 //--------------------------------------------
+	 ///Afficher tous les pharmacies...........
+		 @RequestMapping("/all")
+		 public String showAll(Model model) {
+		     model.addAttribute("Pharmacies", ps.getAllPharmacies());
+		     return "Pharmacie/ListePharmacie";
+		 }
+	 //---------------------------------------------
+		 
+     // trouve une Pharmacie
 	 @RequestMapping(value = "/find", method = RequestMethod.GET)
 	    public String showForm1(Model model) {
 	        model.addAttribute("pharmacie",new Pharmacie());
@@ -44,10 +48,27 @@ public class PharmacieController {
 		 //System.out.println(ps.getPharmacie(ph.getCode_pharmacie()).getEmail());
 	        return "Pharmacie/findPharmacieResult";
 	    }
-	 @RequestMapping(value = "/delete/{code_pharmacie}", method = RequestMethod.GET)
-	    public String showForm3(@PathVariable int id) {
-	        ps.deletePharmacieById(id);
+	 //-----------------------------------------------
+	 //Pour La suppression
+	 @RequestMapping(value = "/delete", method = RequestMethod.GET)
+	    public String showForm3(Model model) {
+		 //model.addAttribute("Pharmacie",new Pharmacie());
 	        return "Pharmacie/deletePharmacie";
 	    }
+	 @RequestMapping(value = "/deletePharmacie", method = RequestMethod.POST)
+	    public String submit2(Pharmacie ph) {
+	      ps.deletePharmacie(ph);
+	        return "Pharmacie/ListePharmacie";
+	    }
+	 ///////////////////////////////////
+	 
+	 /*@GetMapping(value = "/deletePharmacie1/{code_pharmacie}")
+	    public void submit3(@PathVariable("code_pharmacie") int code_pharmacie) {
+	      ps.deletePharmacieById(code_pharmacie);
+	        //return "Pharmacie/all";
+	    }*/
+	 //----------------------
+	 // la Modification --------------------------
+	 
 	 
 }

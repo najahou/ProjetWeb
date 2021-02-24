@@ -542,12 +542,47 @@
                                     <div class="card-body">
                                        
                                        
-                                        <form th:action="@{/deletePharmacie}" th:object="${pharmacie}" method="post">
+                                        <form th:action="@{/createPharmacie}" th:object="${Pharmacie}" method="post">
                                         <div class="form-group row">
-                                            <label class="col-form-label col-lg-3 col-sm-12 text-lg-right">Veuillez Saisir Code Pharmacie</label>
+                                            <label class="col-form-label col-lg-3 col-sm-12 text-lg-right">Code Pharmacie</label>
                                             <div class="col-lg-4 col-md-9 col-sm-12">
-                                                <input type="text" name="code_pharmacie" style="width: 55%" >
-                                                <input type="submit" value="delete" class="btn btn-primary"/>              
+                                                <input type="text" th:field="*{code_pharmacie}"style="width: 55%" value="1">
+                                              
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label class="col-form-label col-lg-3 col-sm-12 text-lg-right">Nom Pharmacie</label>
+                                            <div class="col-lg-4 col-md-9 col-sm-12">
+                                                <input type="text" th:field="*{nompharmacie}"style="width: 55%" >
+                                              
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label class="col-form-label col-lg-3 col-sm-12 text-lg-right">Location</label>
+                                            <div class="col-lg-4 col-md-9 col-sm-12">
+                                                <input type="text" th:field="*{location}"style="width: 55%">
+                                                
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label class="col-form-label col-lg-3 col-sm-12 text-lg-right">N°Tel</label>
+                                            <div class="col-lg-4 col-md-9 col-sm-12">
+                                                <input type="text" th:field="*{telephone}"style="width: 55%" >
+                                            
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label class="col-form-label col-lg-3 col-sm-12 text-lg-right">E-mail</label>
+                                            <div class="col-lg-4 col-md-9 col-sm-12">
+                                                <input type="text" th:field="*{email}"style="width: 55%" value="1">
+                                             
+                                            </div>
+                                        </div>
+                                         <div class="form-group row">
+                                            <label class="col-form-label col-lg-3 col-sm-12 text-lg-right"></label>
+                                            <div class="col-lg-4 col-md-9 col-sm-12">
+                                            
+                                                <input type="submit" value="Modification" class="btn btn-primary"/>  
                                             </div>
                                         </div>
                                        </form>
